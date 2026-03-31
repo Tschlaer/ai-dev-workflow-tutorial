@@ -121,7 +121,7 @@ Descriptive: Two vertical `px.bar` charts in `st.columns(2)` — sales by catego
 
 ## ECOM-8 · Phase 6: Deploy
 
-**Task 6.1 — Wire all components into app.py**
+**Task 6.1 — Wire all components into app.py** [X]
 `ECOM-8`
 Replace stubs with real calls in render order:
 ```python
