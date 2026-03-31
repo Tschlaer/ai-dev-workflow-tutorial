@@ -4,6 +4,9 @@ import streamlit as st
 
 from src.theme import THEME
 
+# font_family is not accepted by px chart functions; apply via update_layout
+_PX_THEME = {k: v for k, v in THEME.items() if k != "font_family"}
+
 
 def render_trend(df: pd.DataFrame) -> None:
     granularity = st.radio("Granularity", ["Monthly", "Daily"], horizontal=True)
@@ -22,8 +25,9 @@ def render_trend(df: pd.DataFrame) -> None:
         y="total_amount",
         labels={"date": "Date", "total_amount": "Sales ($)"},
         title="Sales Trend",
-        **THEME,
+        **_PX_THEME,
     )
+    fig.update_layout(font_family=THEME["font_family"])
     st.plotly_chart(fig, use_container_width=True)
 
 
@@ -50,8 +54,9 @@ def render_breakdowns(df: pd.DataFrame) -> None:
             y="total_amount",
             labels={"category": "Category", "total_amount": "Sales ($)"},
             title="Sales by Category",
-            **THEME,
+            **_PX_THEME,
         )
+        fig_cat.update_layout(font_family=THEME["font_family"])
         st.plotly_chart(fig_cat, use_container_width=True)
 
     with col2:
@@ -61,6 +66,7 @@ def render_breakdowns(df: pd.DataFrame) -> None:
             y="total_amount",
             labels={"region": "Region", "total_amount": "Sales ($)"},
             title="Sales by Region",
-            **THEME,
+            **_PX_THEME,
         )
+        fig_reg.update_layout(font_family=THEME["font_family"])
         st.plotly_chart(fig_reg, use_container_width=True)
