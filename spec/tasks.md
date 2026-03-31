@@ -103,7 +103,7 @@ Layout: `st.columns(4)`, one `st.metric` per column.
 
 ## ECOM-4 · Phase 5: Trend Chart
 
-**Task 5.1 — Implement render_trend() in src/charts.py**
+**Task 5.1 — Implement render_trend() in src/charts.py** [X]
 `ECOM-4`
 Descriptive: Line chart of `total_amount` aggregated by date. Add a `st.radio(["Monthly", "Daily"])` toggle above the chart. Use `df.resample()` on the `date` column. Pass `**THEME` to `px.line()`.
 *Done when:* Monthly view shows ~12 data points; Daily view shows ~365. Toggle switches between them without page error. Chart updates when filters change.
