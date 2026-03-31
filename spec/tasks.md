@@ -74,12 +74,12 @@ Prescriptive — apply filters in order:
 
 ## ECOM-6 · Phase 3: Filters
 
-**Task 3.1 — Implement render_sidebar() in src/filters.py**
+**Task 3.1 — Implement render_sidebar() in src/filters.py** [X]
 `ECOM-6`
 Descriptive: Build a sidebar with three controls using min/max values derived from the passed DataFrame. Return a dict: `{"start_date", "end_date", "categories", "regions"}`. Defaults show all data.
 *Done when:* Sidebar renders with three controls; returned dict has correct keys and types; defaults produce no filtering.
 
-**Task 3.2 — Wire filters into app.py**
+**Task 3.2 — Wire filters into app.py** [X]
 `ECOM-6`
 Call `load_data()`, pass to `render_sidebar()`, pass filter state to `filter_data()`, store result as `filtered_df`. Add temporary `st.write(filtered_df.shape)` to verify.
 *Done when:* Narrowing the date range reduces the row count shown on screen. Remove the temporary `st.write` after verifying.
