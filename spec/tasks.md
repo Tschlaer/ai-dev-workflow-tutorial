@@ -88,7 +88,7 @@ Call `load_data()`, pass to `render_sidebar()`, pass filter state to `filter_dat
 
 ## ECOM-3 · Phase 4: KPI Cards
 
-**Task 4.1 — Implement render_kpis() in src/kpis.py**
+**Task 4.1 — Implement render_kpis() in src/kpis.py** [X]
 `ECOM-3`
 Prescriptive calculations:
 - Total Sales: `df["total_amount"].sum()` → `f"${val:,.0f}"`
