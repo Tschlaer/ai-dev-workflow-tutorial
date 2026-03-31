@@ -112,7 +112,7 @@ Descriptive: Line chart of `total_amount` aggregated by date. Add a `st.radio(["
 
 ## ECOM-5 · Phase 5: Bar Charts
 
-**Task 5.2 — Implement render_breakdowns() in src/charts.py**
+**Task 5.2 — Implement render_breakdowns() in src/charts.py** [X]
 `ECOM-5`
 Descriptive: Two vertical `px.bar` charts in `st.columns(2)` — sales by category (sorted descending) and sales by region (sorted descending). Both use `**THEME`.
 *Done when:* Both charts render side by side. Electronics or Audio is the top category. Bars re-sort correctly when filters reduce the data. Hover shows exact dollar values.
